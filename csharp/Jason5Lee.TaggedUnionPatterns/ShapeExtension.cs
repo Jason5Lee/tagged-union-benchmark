@@ -37,5 +37,23 @@ namespace Jason5Lee.TaggedUnionPatterns
                     throw new Exception($"Unknown shape: {shape.GetType()}.");
             }
         }
+        public static double AreaVisit(this Shape shape) =>
+            shape.Visit(
+                c => Math.PI * c.Radius * c.Radius,
+                e => Math.Sqrt(3.0) / 4.0 * e.SideLen * e.SideLen,
+                s => s.SideLen * s.SideLen,
+                r => r.Height * r.Width
+            );
+        public static double AreaVisitVoid(this Shape shape)
+        {
+            double area = 0.0;
+            shape.Visit(
+                c => { area = Math.PI * c.Radius * c.Radius; },
+                e => { area = Math.Sqrt(3.0) / 4.0 * e.SideLen * e.SideLen; },
+                s => { area = s.SideLen * s.SideLen; },
+                r => { area = r.Height * r.Width; }
+            );
+            return area;
+        }
     }
 }

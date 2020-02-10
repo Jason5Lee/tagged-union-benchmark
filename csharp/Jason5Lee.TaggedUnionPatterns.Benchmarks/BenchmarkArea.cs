@@ -59,5 +59,23 @@ namespace Jason5Lee.TaggedUnionPatterns.Benchmarks
                 area = s.AreaMatch();
             }
         }
+        
+        [Benchmark]
+        public void AreaVisitVoid()
+        {
+            foreach (var s in shapes)
+            {
+                area = s.AreaVisitVoid();
+            }
+        }
+
+        [Benchmark]
+        public void AreaVisit()
+        {
+            foreach (var s in shapes)
+            {
+                area = s.AreaVisit();
+            }
+        }
     }
 }

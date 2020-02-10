@@ -1,6 +1,6 @@
 namespace Jason5Lee.TaggedUnionPatterns
 {
-    public partial class Shape 
+    public abstract partial class Shape 
     {
         internal Shape() {}
     }

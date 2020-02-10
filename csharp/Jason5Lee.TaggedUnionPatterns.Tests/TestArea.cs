@@ -5,7 +5,7 @@ namespace Jason5Lee.TaggedUnionPatterns.Tests
 {
     public class TestArea
     {
-        static (Shape circle, double area)[] expected = new(Shape, double)[]
+        static (Shape shape, double area)[] expected = new(Shape, double)[]
         {
             (new Circle(1.0), Math.PI),
             (new Circle(Math.Sqrt(2.0)), 2.0 * Math.PI),
@@ -24,25 +24,41 @@ namespace Jason5Lee.TaggedUnionPatterns.Tests
         [Fact]
         void TestAreaSwitch()
         {
-            foreach (var (circle, area) in expected)
+            foreach (var (shape, area) in expected)
             {
-                Assert.Equal(area, circle.AreaSwitch(), Precision);
+                Assert.Equal(area, shape.AreaSwitch(), Precision);
             }
         }
         [Fact]
         void TestAreaMatch()
         {
-            foreach (var (circle, area) in expected)
+            foreach (var (shape, area) in expected)
             {
-                Assert.Equal(area, circle.AreaMatch(), Precision);
+                Assert.Equal(area, shape.AreaMatch(), Precision);
             }
         }
         [Fact]
         void TestAreaMatchVoid()
         {
-            foreach (var (circle, area) in expected)
+            foreach (var (shape, area) in expected)
             {
-                Assert.Equal(area, circle.AreaMatchVoid(), Precision);
+                Assert.Equal(area, shape.AreaMatchVoid(), Precision);
+            }
+        }
+        [Fact]
+        void TestAreaVisit()
+        {
+            foreach (var (shape, area) in expected)
+            {
+                Assert.Equal(area, shape.AreaVisit(), Precision);
+            }
+        }
+        [Fact]
+        void TestAreaVisitVoid()
+        {
+            foreach (var (shape, area) in expected)
+            {
+                Assert.Equal(area, shape.AreaVisitVoid(), Precision);
             }
         }
     }
