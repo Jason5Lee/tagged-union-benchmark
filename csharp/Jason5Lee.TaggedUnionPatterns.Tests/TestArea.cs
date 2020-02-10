@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System;
 using Xunit;
 
@@ -7,16 +8,22 @@ namespace Jason5Lee.TaggedUnionPatterns.Tests
     {
         static (Shape shape, double area)[] expected = new(Shape, double)[]
         {
+#if (CASE2 || CASE3 || CASE4)
             (new Circle(1.0), Math.PI),
             (new Circle(Math.Sqrt(2.0)), 2.0 * Math.PI),
             (new Circle(2.0), 4.0 * Math.PI),
+#endif
+#if (CASE3 || CASE4)
             (new EquilateralTriangle(1.0), Math.Sqrt(3) / 4),
             (new EquilateralTriangle(Math.Sqrt(Math.Sqrt(3.0))), 3.0 / 4.0),
             (new EquilateralTriangle(2.0), Math.Sqrt(3.0)),
+#endif
+#if CASE4
             (new Square(1.0), 1.0),
             (new Square(Math.Sqrt(2.0)), 2.0),
             (new Square(Math.Sqrt(3.0)), 3.0),
             (new Square(2.0), 4.0),
+#endif
             (new Rectangle(2.0, 3.0), 6.0),
             (new Rectangle(7.0, 5.0), 35.0)
         };
@@ -59,6 +66,14 @@ namespace Jason5Lee.TaggedUnionPatterns.Tests
             foreach (var (shape, area) in expected)
             {
                 Assert.Equal(area, shape.AreaVisitVoid(), Precision);
+            }
+        }
+        [Fact]
+        void TestAreaVirtual()
+        {
+            foreach (var (shape, area) in expected)
+            {
+                Assert.Equal(area, shape.AreaVirtual(), Precision);
             }
         }
     }

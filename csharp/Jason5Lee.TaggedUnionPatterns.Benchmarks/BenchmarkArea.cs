@@ -13,23 +13,23 @@ namespace Jason5Lee.TaggedUnionPatterns.Benchmarks
         {
             var random = new Random(42);
             shapes = new Shape[N];
+            Func<Shape>[] shapeFactories = new Func<Shape>[]
+            {
+#if (CASE2 || CASE3 || CASE4)
+                () => new Circle(random.NextDouble()),
+#endif
+#if (CASE3 || CASE4)
+                () => new EquilateralTriangle(random.NextDouble()),
+#endif
+#if CASE4
+                () => new Square(random.NextDouble()),
+#endif
+                () => new Rectangle(random.NextDouble(), random.NextDouble())
+            };
+            
             for (int i = 0; i < N; ++i)
             {
-                switch (random.Next(4))
-                {
-                    case 0:
-                        shapes[i] = new Circle(random.NextDouble());
-                        break;
-                    case 1:
-                        shapes[i] = new EquilateralTriangle(random.NextDouble());
-                        break;
-                    case 2:
-                        shapes[i] = new Square(random.NextDouble());
-                        break;
-                    default:
-                        shapes[i] = new Rectangle(random.NextDouble(), random.NextDouble());
-                        break;
-                }
+                shapes[i] = shapeFactories[random.Next(shapeFactories.Length)]();
             }
         }
 
@@ -75,6 +75,14 @@ namespace Jason5Lee.TaggedUnionPatterns.Benchmarks
             foreach (var s in shapes)
             {
                 area = s.AreaVisit();
+            }
+        }
+        [Benchmark]
+        public void AreaVirtual()
+        {
+            foreach (var s in shapes)
+            {
+                area = s.AreaVirtual();
             }
         }
     }
