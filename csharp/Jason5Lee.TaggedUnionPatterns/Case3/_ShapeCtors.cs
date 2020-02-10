@@ -1,6 +1,5 @@
-namespace Jason5Lee.TaggedUnionPatterns
+namespace Jason5Lee.TaggedUnionPatterns.Case3
 {
-#if (CASE2 || CASE3 || CASE4)
     partial class Circle
     {
         public Circle(double radius)
@@ -8,8 +7,6 @@ namespace Jason5Lee.TaggedUnionPatterns
             Radius = radius;
         }
     }
-#endif
-#if (CASE3 || CASE4)
     partial class EquilateralTriangle
     {
         public EquilateralTriangle(double sideLen)
@@ -17,16 +14,6 @@ namespace Jason5Lee.TaggedUnionPatterns
             SideLen = sideLen;
         }
     }
-#endif
-#if CASE4
-    partial class Square
-    {
-        public Square(double sideLen)
-        {
-            SideLen = sideLen;
-        }
-    }
-#endif
     partial class Rectangle
     {
         public Rectangle(double height, double width)
