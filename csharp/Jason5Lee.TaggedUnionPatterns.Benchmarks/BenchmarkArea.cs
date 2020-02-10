@@ -4,8 +4,8 @@ using BenchmarkDotNet.Jobs;
 
 namespace Jason5Lee.TaggedUnionPatterns.Benchmarks
 {
-    // [SimpleJob(RuntimeMoniker.CoreRt31)]
-    // [SimpleJob(RuntimeMoniker.Mono)]
+    [SimpleJob(RuntimeMoniker.CoreRt31)]
+    [SimpleJob(RuntimeMoniker.Mono)]
     [SimpleJob(RuntimeMoniker.NetCoreApp31)]
     [RankColumn]
     public class BenchmarkArea
