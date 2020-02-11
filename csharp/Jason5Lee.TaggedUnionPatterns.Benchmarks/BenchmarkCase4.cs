@@ -6,11 +6,14 @@ namespace Jason5Lee.TaggedUnionPatterns.Benchmarks
     public class BenchmarkCase4 : IBenchmarkMission
     {
         private readonly Shape[] shapes;
+        private readonly TagShape[] tagShapes;
         
         public BenchmarkCase4()
         {
             var random = new Random();
             shapes = new Shape[Utils.N];
+            tagShapes = new TagShape[Utils.N];
+            
             for (int i = 0; i < shapes.Length; ++i)
             {
                 switch (random.Next(4))
@@ -28,6 +31,8 @@ namespace Jason5Lee.TaggedUnionPatterns.Benchmarks
                         shapes[i] = new Rectangle(random.NextDouble(), random.NextDouble());
                         break;
                 }
+
+                tagShapes[i] = shapes[i].ToTagShape();
             }
         }
         public void BenchmarkAreaSwitch()
@@ -71,6 +76,22 @@ namespace Jason5Lee.TaggedUnionPatterns.Benchmarks
             foreach (var s in shapes)
             {
                 Utils.Area = s.AreaVirtual();
+            }
+        }
+
+        public void BenchmarkTagAreaSwitch()
+        {
+            foreach (var s in tagShapes)
+            {
+                Utils.Area = s.AreaSwitch();
+            }
+        }
+
+        public void BenchmarkTagAreaMatch()
+        {
+            foreach (var s in tagShapes)
+            {
+                Utils.Area = s.AreaMatch();
             }
         }
     }

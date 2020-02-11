@@ -63,5 +63,21 @@ namespace Jason5Lee.TaggedUnionPatterns.Tests
                 Assert.Equal(area, shape.AreaVirtual(), Precision);
             }
         }
+        [Fact]
+        void TestTagAreaSwitch()
+        {
+            foreach (var (shape, area) in expected)
+            {
+                Assert.Equal(area, shape.ToTagShape().AreaSwitch(), Precision);
+            }
+        }
+        [Fact]
+        void TestTagAreaMatch()
+        {
+            foreach (var (shape, area) in expected)
+            {
+                Assert.Equal(area, shape.ToTagShape().AreaMatch(), Precision);
+            }
+        }
     }
 }

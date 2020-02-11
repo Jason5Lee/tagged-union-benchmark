@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.2.0/build/netcoreapp1.0" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Jason5Lee.TaggedUnionPatterns" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Case2" t="Include">
+          <e p="_ShapeCtors.cs" t="Include" />
+          <e p="_ShapeMatches.cs" t="Include" />
+          <e p="_ShapeVisits.cs" t="Include" />
+          <e p="_TagShape.cs" t="Include" />
+          <e p="AreaVirtual.cs" t="Include" />
+          <e p="Shape.cs" t="Include" />
+          <e p="ShapeCase.cs" t="Include" />
+          <e p="ShapeExtension.cs" t="Include" />
+          <e p="TagShape.cs" t="Include" />
+          <e p="TagShapeExtension.cs" t="Include" />
+        </e>
+        <e p="Case3" t="Include">
+          <e p="_ShapeArea.cs" t="Include" />
+          <e p="_ShapeCtors.cs" t="Include" />
+          <e p="_ShapeMatches.cs" t="Include" />
+          <e p="_ShapeVisits.cs" t="Include" />
+          <e p="_TagShape.cs" t="Include" />
+          <e p="Shape.cs" t="Include" />
+          <e p="ShapeCase.cs" t="Include" />
+          <e p="ShapeExtension.cs" t="Include" />
+          <e p="TagShape.cs" t="Include" />
+          <e p="TagShapeExtension.cs" t="Include" />
+        </e>
+        <e p="Case4" t="Include">
+          <e p="_ShapeArea.cs" t="Include" />
+          <e p="_ShapeCtors.cs" t="Include" />
+          <e p="_ShapeMatches.cs" t="Include" />
+          <e p="_ShapeVisits.cs" t="Include" />
+          <e p="_TagShape.cs" t="Include" />
+          <e p="Shape.cs" t="Include" />
+          <e p="ShapeCase.cs" t="Include" />
+          <e p="ShapeExtension.cs" t="Include" />
+          <e p="TagShape.cs" t="Include" />
+          <e p="TagShapeExtension.cs" t="Include" />
+        </e>
+        <e p="Jason5Lee.TaggedUnionPatterns.csproj" t="IncludeRecursive" />
+        <e p="MatchBranch.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Jason5Lee.TaggedUnionPatterns.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks" t="IncludeRecursive">
+        <e p="BenchmarkArea.cs" t="Include" />
+        <e p="BenchmarkCase2.cs" t="Include" />
+        <e p="BenchmarkCase3.cs" t="Include" />
+        <e p="BenchmarkCase4.cs" t="Include" />
+        <e p="BenchmarkDotNet.Artifacts" t="Include">
+          <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200210-164850.log" t="Include" />
+          <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200210-165130.log" t="Include" />
+          <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200210-165334.log" t="Include" />
+          <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200210-165631.log" t="Include" />
+          <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200210-172239.log" t="Include" />
+          <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200211-121746.log" t="Include" />
+          <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200211-124623.log" t="Include" />
+          <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200211-171032.log" t="Include" />
+          <e p="results" t="Include">
+            <e p="BuildPlots.R" t="Include" />
+            <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-measurements.csv" t="Include" />
+            <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-report-github.md" t="Include" />
+            <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-report.csv" t="Include" />
+            <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-report.html" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IBenchmarkMission.cs" t="Include" />
+        <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.csproj" t="IncludeRecursive" />
+        <e p="nuget.config" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Utils.cs" t="Include" />
+      </e>
+      <e p="Jason5Lee.TaggedUnionPatterns.sln" t="IncludeFlat" />
+      <e p="Jason5Lee.TaggedUnionPatterns.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Jason5Lee.TaggedUnionPatterns.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Jason5Lee.TaggedUnionPatterns.Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="TestAreaCase2.cs" t="Include" />
+        <e p="TestAreaCase3.cs" t="Include" />
+        <e p="TestAreaCase4.cs" t="Include" />
+        <e p="Utils.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_Jason5Lee.TaggedUnionPatterns.284495992.00" t="ExcludeRecursive" />
+  </component>
+</project>

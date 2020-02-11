@@ -8,5 +8,7 @@ namespace Jason5Lee.TaggedUnionPatterns.Benchmarks
         void BenchmarkAreaVisitVoid();
         void BenchmarkAreaVisit();
         void BenchmarkAreaVirtual();
+        void BenchmarkTagAreaSwitch();
+        void BenchmarkTagAreaMatch();
     }
 }
