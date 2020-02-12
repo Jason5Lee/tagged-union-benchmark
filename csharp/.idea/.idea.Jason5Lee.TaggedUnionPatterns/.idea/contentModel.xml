@@ -70,6 +70,7 @@
           <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200211-121746.log" t="Include" />
           <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200211-124623.log" t="Include" />
           <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200211-171032.log" t="Include" />
+          <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-20200211-172804.log" t="Include" />
           <e p="results" t="Include">
             <e p="BuildPlots.R" t="Include" />
             <e p="Jason5Lee.TaggedUnionPatterns.Benchmarks.BenchmarkArea-measurements.csv" t="Include" />
