@@ -4,4 +4,4 @@ Benchmarks of tagged union patterns.
 
 ## TODO
 
-- ☐ Use docker to handle enviroment.
+- ☐ Create automation script.
