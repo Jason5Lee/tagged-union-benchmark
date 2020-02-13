@@ -5,8 +5,9 @@ using BenchmarkDotNet.Jobs;
 namespace Jason5Lee.TaggedUnionPatterns.Benchmarks
 {
     [SimpleJob(RuntimeMoniker.NetCoreApp31)]
+    [SimpleJob(RuntimeMoniker.CoreRt31)]
     [RankColumn]
-    [RPlotExporter]
+    // [RPlotExporter]
     public class BenchmarkArea
     {
         [Params(2, 3, 4)]
